@@ -65,6 +65,7 @@ hammer location add-organization --organization MyOrg --name MyLocation
   
 - Content -> Products
   ```Select the rpms and click sync now```
+  
   #This task requires a lot of time...
   
   
