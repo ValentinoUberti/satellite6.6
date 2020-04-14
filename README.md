@@ -64,9 +64,9 @@ hammer location add-organization --organization MyOrg --name MyLocation
   
 ```hammer lifecycle-environment list --organization <organization-name>```
 
-- List lifecycle environment path
+- List lifecycle environment paths
 
-```hammer lifecycle-environment path --organization <organization-name>```
+```hammer lifecycle-environment paths --organization <organization-name>```
 
 
 ## Sync Red Hat Content
