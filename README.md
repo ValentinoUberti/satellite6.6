@@ -8,6 +8,6 @@
 Verify firewall ports
 Verify correct reverse DNS resolution of the satellite server
 
-## hammer
+## Hammer
 - Create an organization
-```hammer organization create --name --label --description
+```hammer organization create --name --label --description```
