@@ -26,7 +26,7 @@ hammer location add-organization --organization MyOrg --name MyLocation
 
 - Import a Manifest for multiple organization
 
-```hammer -u <USER> -p <PASSWORD> subscription upload --file manifest.zip --organization "Default_Organization" ```
+```hammer subscription upload --file manifest.zip --organization "Default_Organization" ```
 
 - Import a Manifest for an organization
 
