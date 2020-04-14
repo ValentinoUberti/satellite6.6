@@ -56,6 +56,19 @@ hammer location add-organization --organization MyOrg --name MyLocation
 
 ```hammer repository synchronize --id <id>```
 
+- Managing life cycle environments 
+
+```hammer lifecycle-environment create --name <> --organization <> --description <> --prior <Library>```
+
+- List lifecycle environment
+  
+```hammer lifecycle-environment list --organization <organization-name>```
+
+- List lifecycle environment path
+
+```hammer lifecycle-environment path --organization <organization-name>```
+
+
 ## Sync Red Hat Content
 
 - Content -> Red Hat Repositories
@@ -69,11 +82,20 @@ hammer location add-organization --organization MyOrg --name MyLocation
   #This task requires a lot of time...
   
   
-# Create a sync plan
+## Create a sync plan
 
  - Content -> Sync Plans -> Create Sync Plans
  
  - Monitor -> Recurring Logics for checking also sync plans
+ 
+## Create a SDLC (Software deployment life cycle)
+
+ - Content -> Lifecycle Envoronments -> Create Environment path
+ 
+The first environment is always called 'Library'.
+Library environment receive updates constantly.
+
+
  
 
 
