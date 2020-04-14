@@ -30,7 +30,7 @@ hammer location add-organization --organization MyOrg --name MyLocation
 
 - Import a Manifest for an organization
 
-```hammer -u <USER> -p <PASSWORD> subscription upload --file manifest.zip --organization MyOrg```
+```hammer subscription upload --file manifest.zip --organization MyOrg```
 
 - List organization
 
