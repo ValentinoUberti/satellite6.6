@@ -48,6 +48,26 @@ hammer location add-organization --organization MyOrg --name MyLocation
 
 ```hammer list location --organization MyOrg```
 
+- List repository
+
+```hammer --output json repository list```
+
+- Sync repository
+
+```hammer repository synchronize --id <id>```
+
+## Sync Red Hat Content
+
+- Content -> Red Hat Repositories
+  ```
+  Add wanted repos
+  ```
+  
+- Content -> Products
+  ```Select the rpms and click sync now```
+  #This task requires a lot of time...
+  
+  
 
 
 
