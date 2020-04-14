@@ -15,7 +15,10 @@ Verify correct reverse DNS resolution of the satellite server
 
 - Create a location and associate it to an organization
 
-```hammer location create --organization MyOrg --name MyLocation```
+```
+hammer location create --name MyLocation
+hammer location add-organization --organization MyOrg --name MyLocation  
+```
 
 - Associate a CDN to an organization
 
