@@ -96,7 +96,18 @@ The first environment is always called 'Library'.
 Library environment receive updates constantly.
 
 
- 
+## Content views (Create -> Pubblish -> Promote)
+
+- Content -> Content Views -> Create New View
+
+- Yum content -> Repositories -> Add
+
+- Content -> Content Views -> Select Content View -> Publish New Version
+
+- Content -> Content Views -> Select Content View -> Version -> Actions -> Promote
+
+
+
 
 
 
