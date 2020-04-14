@@ -17,4 +17,18 @@ Verify correct reverse DNS resolution of the satellite server
 
 ```hammer location create --organization MyOrg --name MyLocation```
 
+- Associate a CDN to an organization
+
+```hammer organization update --name MyOrg --redhat-repository-url REDHAT_REPOSITORY_URL```
+
+- Import a Manifest for multiple organization
+
+```hammer -u <USER> -p <PASSWORD> subscription upload --file manifest.zip --organization "Default_Organization" ```
+
+- Import a Manifest for an organization
+
+```hammer -u <USER> -p <PASSWORD> subscription upload --file manifest.zip --organization MyOrg```
+
+
+
 
