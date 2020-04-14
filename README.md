@@ -69,6 +69,12 @@ hammer location add-organization --organization MyOrg --name MyLocation
   #This task requires a lot of time...
   
   
+# Create a sync plan
+
+ - Content -> Sync Plans -> Create Sync Plans
+ 
+ - Monitor -> Recurring Logics for checking also sync plans
+ 
 
 
 
