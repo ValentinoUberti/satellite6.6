@@ -32,6 +32,20 @@ hammer location add-organization --organization MyOrg --name MyLocation
 
 ```hammer -u <USER> -p <PASSWORD> subscription upload --file manifest.zip --organization MyOrg```
 
+- List organization
+
+```hammer list organization```
+
+- List location
+
+```hammer list location```
+
+- List location belonging to an organization
+
+```hammer list location --organization MyOrg```
+
+
+
 
 
 
