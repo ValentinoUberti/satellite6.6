@@ -1,11 +1,15 @@
 # Satellite 6.6 notes
 
 ## Verify satellite services status and health
-- satellite-maintain service list
-- satellite-maintain health check
-- systemctl status chronyd
+
+``` 
+satellite-maintain service list
+satellite-maintain health check
+systemctl status chronyd
+```
 
 Verify firewall ports
+
 Verify correct reverse DNS resolution of the satellite server
 
 ## Hammer
