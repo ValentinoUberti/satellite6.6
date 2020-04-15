@@ -108,6 +108,8 @@ Library environment receive updates constantly.
 
 ## Registering an host
 
+Managing Hosts > Chapter 3. Registering Hosts
+
 - Ensure chronyd is running on the host we want to register
 - Update yum and subscription-manager
 
