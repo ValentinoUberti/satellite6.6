@@ -68,6 +68,20 @@ hammer location add-organization --organization MyOrg --name MyLocation
 
 ```hammer lifecycle-environment paths --organization <organization-name>```
 
+- Create an activation key
+
+```hammer activation-key create --name "<activation_key_name" --unlimited-hosts --description "<description" --lifecycle-environment <environment-name> --content-view <content_view_name> --organization "<organization_name>"```
+
+- Add a subscription to an activation key
+
+```hammer subscription list --organization "<organization_name>"```
+
+take the UUID
+
+```hammer activation-key add-subscription --name <activation_key_name> --subscription-id <UUID> --organization <organization_name>```
+
+
+
 
 ## Sync Red Hat Content
 
@@ -125,7 +139,7 @@ Managing Hosts > Chapter 3. Registering Hosts
 
 - Register the host to an organization
 
-```subscription-manager register --org <organization_label>```
+```subscription-manager register --org <organization_label> --environment <Life-cycle-environment>/<Promoted_content_view>```
 
 - Install the katello-agent for package and errata management
 
@@ -146,10 +160,57 @@ Managing Hosts > Chapter 3. Registering Hosts
 ```Hosts -> Content Hosts -> Repository Sets > Select Action ```
 
 
+## Host Collections
+
+Logical group of hosts
+
+-> Create a host collection
+
+```Hosts -> host collections```
+
+-> Add an host to an host collection
+
+```Hosts -> host collections -> Details```
+
+## Automating content host registration (Activation key)
+
+Content management guide -> Managing activation keys (10)
+
+- Create an actiovation key
+
+```Content -> Activation Keys```
+
+- Add subscription to activation key
+
+```Content -> Activation Keys -> Subscriptions -> Add```
+
+- Add host collection to activation keys
+
+```Content -> Activation Keys -> Host Collections -> Add```
 
 
+## Preparing an host for registration to Satellite
 
+- Ensure chronyd is running on the host we want to register
+- Update yum and subscription-manager
 
+```yum update -y subscription-manager yum```
+
+- Install the customer certificate from Satellite server
+
+```yum localinstall http://<satellite_server>/pub/katello-ca-consumer-latest.noarch.rpm```
+
+- Clean old registration data
+
+```subscription-manager clean```
+
+- Register the host to an organization
+
+```subscription-manager register --org <organization_label> --activationkey <activation_key_name>```
+
+- Install the katello-agent for package and errata management
+
+```yum install katello-agent```
 
 
 
