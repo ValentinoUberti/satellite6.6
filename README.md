@@ -213,5 +213,7 @@ Content management guide -> Managing activation keys (10)
 ```yum install katello-agent```
 
 
+## Creating Custom Products
 
+- Content -> Product
 
