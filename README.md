@@ -106,6 +106,45 @@ Library environment receive updates constantly.
 
 - Content -> Content Views -> Select Content View -> Version -> Actions -> Promote
 
+## Registering an host
+
+- Ensure chronyd is running on the host we want to register
+- Update yum and subscription-manager
+
+```yum update -y subscription-manager yum```
+
+- Install the customer certificate from Satellite server
+
+```yum localinstall http://<satellite_server>/pub/katello-ca-consumer-latest.noarch.rpm```
+
+- Clean old registration data
+
+```subscription-manager clean```
+
+- Register the host to an organization
+
+```subscription-manager register --org <organization_label>```
+
+- Install the katello-agent for package and errata management
+
+```yum install katello-agent```
+
+## Configuring registered host from Satellite server
+
+- Host properties
+
+```Hosts -> Content Hosts -> Details```
+
+- Host subscriptions
+
+```Hosts -> Content Hosts -> Subscriptions -> Add -> Add Selected```
+
+- Product Content Access
+
+```Hosts -> Content Hosts -> Repository Sets > Select Action ```
+
+
+
 
 
 
