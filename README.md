@@ -217,3 +217,26 @@ Content management guide -> Managing activation keys (10)
 
 - Content -> Product
 
+## Adding GPG Keys
+
+- Content -> Content Credentials
+
+- Digital sign a rpm package
+
+```sudo yum install rpm-sign```
+
+- generate entropy
+
+```sudo rngd -r /dev/urandom```
+
+- generate gpg key
+
+```gpg --generate-key```
+
+- Export gpg public key as ASCII armor
+
+```gpg --armor --export <username@email> > armored
+
+
+
+
