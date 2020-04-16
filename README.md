@@ -212,6 +212,12 @@ Content management guide -> Managing activation keys (10)
 
 ```yum install katello-agent```
 
+## Applying errata
+
+- View errata
+
+```Content -> Errata```
+
 
 ## Creating Custom Products
 
@@ -235,7 +241,44 @@ Content management guide -> Managing activation keys (10)
 
 - Export gpg public key as ASCII armor
 
-```gpg --armor --export <username@email> > armored
+```gpg --armor --export <username@email> > armored```
+
+## Installing external capsule server
+
+- html guide -> Install capsule server
+
+- All capsule operations under Infrastructure -> Capsules
+
+## Running remote jobs on hosts (3.2)
+
+- Remote execution must be enabled on remote capsule server. It is enabled by default on Satellite server.
+
+- Enable remote execution on remote capsule server
+
+```satellite-installer --scenario capsule --enable-foreman-proxy-plugin-remote-execution-ssh```
+
+- Remote execution can be verified if "SSH" is in capsule's feature list
+
+- Distrubuite the capsule ssh public key to all the hosts (managing_host)
+
+## Using ansible roles
+
+- copy CUSTOM ansible roles on satellite or capsule server directory /etc/ansible/roles
+
+- Configure -> Roles -> capsule_host -> Select -> Update
+
+- for Ansible system roles:
+  activate ansible system roles repo
+  
+  ```subscription-manager repos --enable=rhel-7-server-extras-rpms```
+  ```satellite-maintain packages install rhel-system-roles```
+
+## Using Puppet
+
+- Puppet client must be installed on controlled host
+
+
+
 
 
 
