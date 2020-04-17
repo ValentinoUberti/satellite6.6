@@ -278,6 +278,33 @@ Content management guide -> Managing activation keys (10)
 - Puppet client must be installed on controlled host
 
 
+## Provisioning host
+
+- Enable and synchronize Kickstart repositories
+
+## Prepare network for provisioning
+
+
+## Users
+
+- Creating new roles
+
+```Administer -> Roles```
+
+```System admin role -> Filters -> Clone```
+
+## Backup
+
+- Without pulp content
+
+```satellite-maintain backup offline --skip-pulp-content <director>```
+
+- Restore
+
+```satellite-maintain backup restore <directory_name>
+
+
+
 
 
 
