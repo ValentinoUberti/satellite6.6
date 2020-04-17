@@ -301,7 +301,9 @@ Content management guide -> Managing activation keys (10)
 
 - Restore
 
-```satellite-maintain backup restore <directory_name>
+```satellite-maintain backup restore <directory_name>```
+
+
 
 
 
